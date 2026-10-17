@@ -1,0 +1,10 @@
+{
+  "name": "TransitEase — Real-Time Public Transport Tracking",
+  "description": "A real-time and inclusive public transport tracking system for small cities with live driver GPS tracking, search by bus or driver phone number, A-to-B journey planner, offline SMS support, Hindi/English accessibility, and admin fleet operations.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

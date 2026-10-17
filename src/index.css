@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  [lang="hi"] body {
+    font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --bg-primary: #000000;
+  --text-primary: #ffffff;
+  --border-primary: #ffffff;
+}
+
+.high-contrast body,
+.high-contrast .bg-slate-50,
+.high-contrast .bg-white {
+  background-color: #050505 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .text-slate-900,
+.high-contrast .text-slate-800,
+.high-contrast .text-slate-700,
+.high-contrast .text-slate-600 {
+  color: #f8fafc !important;
+}
+
+.high-contrast .border-slate-200,
+.high-contrast .border-slate-300 {
+  border-color: #64748b !important;
+}
+
+.high-contrast .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+/* Font Size Scaling */
+.text-scale-large {
+  font-size: 1.15rem;
+}
+.text-scale-large h1 { font-size: 2.25rem; }
+.text-scale-large h2 { font-size: 1.75rem; }
+.text-scale-large h3 { font-size: 1.4rem; }
+
+/* Custom Leaflet Map styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 10;
+}
+
+.custom-bus-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.6); opacity: 0.2; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
